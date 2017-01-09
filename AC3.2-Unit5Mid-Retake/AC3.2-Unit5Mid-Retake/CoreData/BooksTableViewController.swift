@@ -39,6 +39,7 @@ class BooksTableViewController: UITableViewController, CellTitled, NSFetchedResu
         tableView.rowHeight = UITableViewAutomaticDimension
         // this should filter the results from core data without any network call
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        getData()
         initializeFetchedResultsController()
         self.tableView.tableHeaderView = searchBar
         searchBar.delegate = self
